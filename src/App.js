@@ -65,7 +65,6 @@ class App extends React.Component {
         <section>
           
           <Pokelist
-             types={this.state.types}
             pokemon={this.state.pokemon}
           />
         </section>
