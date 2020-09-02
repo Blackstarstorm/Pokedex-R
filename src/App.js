@@ -58,10 +58,7 @@ class App extends React.Component {
         <nav>
           <Types
             handleChange={this.handleChange}
-            handleClick={this.handleClick}
             handleSubmit={this.handleSubmit}
-            value={this.state.value}
-           
           />
         </nav>
 

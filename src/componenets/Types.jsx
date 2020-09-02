@@ -14,7 +14,7 @@ export default class Types extends React.Component {
         <form onSubmit={this.props.handleSubmit}
           >
           
-          <select id="poke-types" onChange={this.props.handleChange} value={this.props.value}>
+          <select id="poke-types" onChange={this.props.handleChange} >
 
           <option >Select a Pokémon Type</option>
             <option value="normal">Normal</option>
