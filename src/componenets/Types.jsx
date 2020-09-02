@@ -12,9 +12,9 @@ export default class Types extends React.Component {
         <h2>Discover more Pokémon by their types</h2>
 
         <form onSubmit={this.props.handleSubmit}
-          onChange={this.props.handleChange}>
+          >
           
-          <select id="poke-types">
+          <select id="poke-types" onChange={this.props.handleChange} value={this.props.value}>
 
           <option >Select a Pokémon Type</option>
             <option value="normal">Normal</option>
@@ -37,7 +37,7 @@ export default class Types extends React.Component {
             <option value="fairy">Fairy</option>
           
           </select>
-        <button id="btn-submit" >Search</button>
+        <button id="btn-submit">Search</button>
         </form>
         
       </div>

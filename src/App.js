@@ -15,6 +15,13 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount = async () => {
+    let pokemon = await getType(this.state.types);
+    this.setState({
+      types: pokemon
+    })
+  }
+
   handleChange = (event) => {
     let value = event.target.value;
     this.setState({
@@ -25,7 +32,7 @@ class App extends React.Component {
   // handleClick = async (event) => {
   //   let pokeTypes = event.target.value;
   //   this.setState({
-  //     types: pokeTypes
+  //     
   //   })
   //   }
 
@@ -33,16 +40,11 @@ class App extends React.Component {
     event.preventDefault();
     const pokemon = await getType(this.state.types);
     this.setState({
-      types: pokemon
+       pokemon: pokemon
     })
   }
 
-  componentDidMount = async () => {
-    let pokemon = await getType(this.state.types);
-    this.setState({
-      types: pokemon
-    })
-  }
+  
 
   render() {
     return (
@@ -58,6 +60,7 @@ class App extends React.Component {
             handleChange={this.handleChange}
             handleClick={this.handleClick}
             handleSubmit={this.handleSubmit}
+            value={this.state.value}
            
           />
         </nav>

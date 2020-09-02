@@ -6,7 +6,9 @@ class Pokelist extends React.Component {
       <div id="poke-list">
         {
           this.props.pokemon.map(poke => (
-            <div key={poke.id}>
+            <div className="poke-name"
+              key={poke.name}
+            >
               <h2>{poke.name}</h2>
               <button>More Info</button>
             </div>
