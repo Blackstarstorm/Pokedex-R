@@ -1,9 +1,21 @@
 .App {
   text-align: center;
-  
 }
+
+div.App{
+  background-image: url("https://res.cloudinary.com/dvysqqdqe/image/upload/v1599116522/ah7hgbqhsolmdrkmswp2.jpg");
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #poke-list{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.name{
+  text-transform: capitalize;
 }

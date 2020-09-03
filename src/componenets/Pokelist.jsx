@@ -10,7 +10,7 @@ class Pokelist extends React.Component {
               key={poke.id}
               className="poke-name"
             >
-              <h2>{poke.pokemon.name}</h2>
+              <h2 className="name">{poke.pokemon.name}</h2>
               <button>More Info</button>
             </div>
           ))

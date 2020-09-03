@@ -4,7 +4,7 @@ import Title from './componenets/Title';
 import Hero from './componenets/Hero';
 import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
-import { getType } from './services/api-helper';
+import { getType, getSprite } from './services/api-helper';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,6 +22,13 @@ class App extends React.Component {
     })
   }
 
+  // componentDidMount = async () => {
+  //   let pokemon = await getSprite(this.state.pokemon);
+  //   this.setState({
+  //     pokemon
+  //   })
+  // }
+
   handleChange = (event) => {
     let value = event.target.value;
     this.setState({
@@ -32,7 +39,7 @@ class App extends React.Component {
   // handleClick = async (event) => {
   //   let pokeTypes = event.target.value;
   //   this.setState({
-  //     
+      
   //   })
   //   }
 
