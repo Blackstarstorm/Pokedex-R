@@ -21,6 +21,11 @@ html{
   height: 70%;
   width: 70%;
   border: 1px solid black;
+  box-shadow: 1px 1px 1px black;
+  padding: 4em;
+  left: 15%;
+  top: 30%;
+  box-sizing: border-box;
 }
 
 .name{

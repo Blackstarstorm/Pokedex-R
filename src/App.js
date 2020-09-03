@@ -48,7 +48,7 @@ class App extends React.Component {
     event.preventDefault();
     const pokemon = await getType(this.state.types);
     this.setState({
-       pokemon: pokemon
+      pokemon: pokemon
     })
   }
 
@@ -76,7 +76,7 @@ class App extends React.Component {
             pokemon={this.state.pokemon}
             modalHandleClick={this.modalHandleClick}
           />
-          
+
           <Modal
           
           />
