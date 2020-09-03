@@ -1,19 +1,26 @@
 .App {
   text-align: center;
+  font-family: 'Press Start 2P', cursive;
 }
 
-div.App{
-  background-image: url("https://res.cloudinary.com/dvysqqdqe/image/upload/v1599116522/ah7hgbqhsolmdrkmswp2.jpg");
-  height: 100%;
+html{
+  background: url("https://res.cloudinary.com/dvysqqdqe/image/upload/v1599116522/ah7hgbqhsolmdrkmswp2.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 #poke-list{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+#modal{
+  position: fixed;
+  z-index: 500;
+  background-color: purple;
+  height: 70%;
+  width: 70%;
+  border: 1px solid black;
 }
 
 .name{

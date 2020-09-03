@@ -4,6 +4,7 @@ import Title from './componenets/Title';
 import Hero from './componenets/Hero';
 import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
+import Modal from './componenets/Modal';
 import { getType, getSprite } from './services/api-helper';
 
 class App extends React.Component {
@@ -11,7 +12,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       types: "",
-      pokemon: []
+      pokemon: [],
+      showModal: false
     }
   }
 
@@ -23,9 +25,9 @@ class App extends React.Component {
   }
 
   // componentDidMount = async () => {
-  //   let pokemon = await getSprite(this.state.pokemon);
+  //   let sprite = await getSprite(this.state.pokemon);
   //   this.setState({
-  //     pokemon
+  //     pokemon: sprite
   //   })
   // }
 
@@ -36,10 +38,9 @@ class App extends React.Component {
     })
   }
 
-  // handleClick = async (event) => {
-  //   let pokeTypes = event.target.value;
+  // modalHandleClick = () => {
   //   this.setState({
-      
+  //     showModal: true
   //   })
   //   }
 
@@ -73,6 +74,11 @@ class App extends React.Component {
           
           <Pokelist
             pokemon={this.state.pokemon}
+            modalHandleClick={this.modalHandleClick}
+          />
+          
+          <Modal
+          
           />
         </section>
 
