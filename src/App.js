@@ -4,7 +4,8 @@ import Title from './componenets/Title';
 import Hero from './componenets/Hero';
 import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
-import Modal from './componenets/Modal';
+import ModalNPM from './componenets/Modal';
+import Modal from 'react-modal';
 import { getType, getSprite } from './services/api-helper';
 
 class App extends React.Component {
@@ -44,6 +45,12 @@ class App extends React.Component {
   //   })
   //   }
 
+  // modalHandleClickClose = () => {
+  //   this.setState({
+  //     showModal: false
+  //   })
+  // }
+
   handleSubmit = async (event) => {
     event.preventDefault();
     const pokemon = await getType(this.state.types);
@@ -76,10 +83,11 @@ class App extends React.Component {
             pokemon={this.state.pokemon}
             modalHandleClick={this.modalHandleClick}
           />
-
-          <Modal
-          
-          />
+          <ModalNPM>
+            <Modal
+            closeModal={this.modalHandleClickClose}
+            />
+          </ModalNPM>
         </section>
 
         <footer>
