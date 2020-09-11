@@ -11,13 +11,11 @@ class Pokelist extends React.Component {
         {
           this.props.pokemon.map(poke => (
             <div
-              key={poke.pokemon.id}
+              key={poke.pokemon.name}
               className="poke-name"
             >
               <h2 className="name">{poke.pokemon.name}</h2>
-              <button onClick={this.modalHandleClick}>More Info</button>
-              
-              
+              <button onClick={this.props.openModal}>More Info</button>
             </div>
           ))
         }

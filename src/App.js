@@ -4,8 +4,8 @@ import Title from './componenets/Title';
 import Hero from './componenets/Hero';
 import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
-import ModalNPM from './componenets/Modal';
-import Modal from 'react-modal';
+import Modal from './componenets/Modal';
+import ModalNPM from "react-modal";
 import { getType, getSprite } from './services/api-helper';
 
 class App extends React.Component {
@@ -15,8 +15,13 @@ class App extends React.Component {
       types: "",
       pokemon: [],
       showModal: false
-    }
+    };
+
+    this.modalHandleClick = this.modalHandleClick.bind(this);
+    
+    this.modalHandleClickClose = this.modalHandleClickClose.bind(this);
   }
+  
 
   componentDidMount = async () => {
     let pokemon = await getType(this.state.types);
@@ -25,12 +30,12 @@ class App extends React.Component {
     })
   }
 
-  // componentDidMount = async () => {
-  //   let sprite = await getSprite(this.state.pokemon);
-  //   this.setState({
-  //     pokemon: sprite
-  //   })
-  // }
+  componentDidMount = async () => {
+    let sprite = await getSprite(this.state.pokemon);
+    this.setState({
+      sprite
+    })
+  }
 
   handleChange = (event) => {
     let value = event.target.value;
@@ -39,17 +44,17 @@ class App extends React.Component {
     })
   }
 
-  // modalHandleClick = () => {
-  //   this.setState({
-  //     showModal: true
-  //   })
-  //   }
+  modalHandleClick = () => {
+    this.setState({
+      showModal: true
+    });
+  }
 
-  // modalHandleClickClose = () => {
-  //   this.setState({
-  //     showModal: false
-  //   })
-  // }
+  modalHandleClickClose = () => {
+    this.setState({
+      showModal: false
+    });
+  }
 
   handleSubmit = async (event) => {
     event.preventDefault();
@@ -64,7 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header>  
+        <header>
           <Title />
 
           <Hero />
@@ -81,11 +86,13 @@ class App extends React.Component {
           
           <Pokelist
             pokemon={this.state.pokemon}
-            modalHandleClick={this.modalHandleClick}
+            openModal={this.modalHandleClick}
           />
-          <ModalNPM>
+
+          <ModalNPM
+            isOpen={this.state.showModal}>
             <Modal
-            closeModal={this.modalHandleClickClose}
+              closeModal={this.modalHandleClickClose}
             />
           </ModalNPM>
         </section>
