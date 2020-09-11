@@ -4,7 +4,6 @@ import Title from './componenets/Title';
 import Hero from './componenets/Hero';
 import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
-import Modal from './componenets/Modal';
 import ModalNPM from "react-modal";
 import { getType, getSprite } from './services/api-helper';
 
@@ -90,10 +89,13 @@ class App extends React.Component {
           />
 
           <ModalNPM
-            isOpen={this.state.showModal}>
-            <Modal
-              closeModal={this.modalHandleClickClose}
-            />
+            isOpen={this.state.showModal}
+            contentLabel= "onRequestClose"
+            className= "Modal"
+          >
+
+            <button onClick={this.modalHandleClickClose}>Close</button>
+
           </ModalNPM>
         </section>
 
