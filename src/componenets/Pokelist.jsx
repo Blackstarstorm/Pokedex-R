@@ -2,9 +2,6 @@ import React from 'react';
 
 class Pokelist extends React.Component {
   render() {
-    // const pokeName = Object.keys(this.props.pokemon).map(pokeId => {
-      
-    // });
     
     return (
       <div id="poke-list">
@@ -15,7 +12,8 @@ class Pokelist extends React.Component {
               className="poke-name"
             >
               <h2 className="name">{poke.pokemon.name}</h2>
-              <button onClick={this.props.openModal}>More Info</button>
+              <button id={poke.pokemon.name}
+                onClick={this.props.openModal}>More Info</button>
             </div>
           ))
         }
