@@ -7,6 +7,6 @@ export const getType = async function (value) {
 
 export const getSprite = async function (name) {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
-  console.log(response);
+  return response.data.sprites.front_default;
 }
 // response.data.sprites.front_default

@@ -13,7 +13,7 @@ class App extends React.Component {
     this.state = {
       types: "",
       pokemon: [],
-      sprite: "",
+      sprite:"",
       showModal: false
     };
 
@@ -30,6 +30,13 @@ class App extends React.Component {
     })
   }
 
+  // componentDidMount = async (event) => {
+  //   let name = event.target.id;
+  //   let sprite = await getSprite(name);
+  //   this.setState({
+  //     data: sprite
+  //   })
+  // }
 /// Pokemon types
   handleChange = (event) => {
     let value = event.target.value;
@@ -39,8 +46,8 @@ class App extends React.Component {
   }
 
 //Open modal, showing sprites
-  modalHandleClick = async () => {
-    let name = new Pokelist();
+  modalHandleClick = async (event) => {
+    let name = event.target.id;
     let sprite = await getSprite(name);
     this.setState({
       sprite,
@@ -95,7 +102,7 @@ class App extends React.Component {
             className="Modal"
             
           >
-
+            
             <button onClick={this.modalHandleClickClose}>Close</button>
 
           </ModalNPM>
