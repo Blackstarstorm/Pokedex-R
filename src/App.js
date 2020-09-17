@@ -37,6 +37,7 @@ class App extends React.Component {
   //     data: sprite
   //   })
   // }
+  
 /// Pokemon types
   handleChange = (event) => {
     let value = event.target.value;
@@ -49,11 +50,11 @@ class App extends React.Component {
   modalHandleClick = async (event) => {
     let name = event.target.id;
     let sprite = await getSprite(name);
-    this.setState({
-      sprite,
-      showModal: true
-    });
-  }
+      this.setState({
+        sprite,
+        showModal: true
+      });
+    }
 
   //Close modal
   modalHandleClickClose = () => {
@@ -100,9 +101,9 @@ class App extends React.Component {
             isOpen={this.state.showModal}
             contentLabel= "onRequestClose"
             className="Modal"
-            
           >
             
+            <div><img src={this.state.sprite} alt="a sprite" /></div>
             <button onClick={this.modalHandleClickClose}>Close</button>
 
           </ModalNPM>
