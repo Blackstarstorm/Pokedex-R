@@ -3,23 +3,32 @@ import React from 'react';
 export default class Data extends React.Component {
   render() {
     return (
-    <div>
+    <div id="data">
       <div className="sprite_layout">
-        <h3>Normal Look</h3>
-          {img ? <img src={this.props.sprite} alt="a pokémon sprite" /> : <img src=`` alt="No data avalible"}
+        <h3>Normal</h3>
+          {this.props.sprite ? <img src={this.props.sprite} alt="a pokémon sprite" /> : 
+            <img className="no_data" src="https://res.cloudinary.com/dvysqqdqe/image/upload/v1600399811/220_iad9fa.png" alt="No data avalible"
+            />
+          }
     
-        <h3>Shiny Look</h3>
-        <img src={this.props.shinySprite} alt="a shiny pokémon sprite" />
+        <h3>Shiny</h3>
+          {this.props.shinySprite ? <img src={this.props.shinySprite} alt="a shiny pokémon sprite" /> :
+        <img className="no_data" src="https://res.cloudinary.com/dvysqqdqe/image/upload/v1600399811/220_iad9fa.png" alt="No data avalible"
+        />}
       </div>
         
         <h4>Abilities:</h4>
+          
         {
+          
           this.props.ability.map(ab => (
             <div className="ability">
-              <ul>{ab.ability.name}</ul>
-            </div>
-        ))
-        }
+                <ul>{ab.ability.name}</ul>
+                
+              </div>
+            ))
+          }
+          
       <h4>Stats:</h4>
         {
           this.props.stats.map(num => (

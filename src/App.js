@@ -111,7 +111,7 @@ class App extends React.Component {
               stats={this.state.stats}
             />
 
-            <button onClick={this.modalHandleClickClose}>Close</button>
+            <button className="close" onClick={this.modalHandleClickClose}>Close</button>
 
           </ModalNPM>
         </section>

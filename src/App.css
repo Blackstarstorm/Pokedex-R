@@ -13,6 +13,8 @@ html{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+  height: 50vh;
+  overflow: scroll;
 }
 
 .name{
@@ -22,10 +24,10 @@ html{
 /* // The Modal */
 .Modal{
   position: absolute;
-    top: 4em;
-    left: 4em;
-    right: 4em;
-    bottom: 4em;
+    top: 3rem;
+    left: 3rem;
+    right: 3rem;
+    bottom: 3rem;
     background-color: purple;
     box-shadow: 2px 2px black;
     text-align: center;
@@ -35,6 +37,10 @@ html{
 .sprite_layout{
   display: flex;
   justify-content: space-evenly;
+}
+.no_data{
+  height: 6rem;
+  padding: 1rem;
 }
 .ability{
   text-transform: capitalize;
@@ -47,4 +53,8 @@ html{
 }
 .base_stat{
   display: inline;
+}
+.close{
+  padding: 0.6rem;
+  margin: 0.4rem;
 }
