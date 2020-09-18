@@ -20,4 +20,7 @@ export const getPokeAbilities = async function (name) {
   return response.data.abilities;
 }
 
-// return response.data.abilities;
+export const getPokeStats = async function (name) {
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  return response.data.stats;
+}

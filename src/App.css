@@ -31,9 +31,20 @@ html{
     text-align: center;
 }
 
-#sprite_layout{
+/* Data in Modal*/
+.sprite_layout{
   display: flex;
   justify-content: space-evenly;
 }
-
-
+.ability{
+  text-transform: capitalize;
+}
+.status{
+  display: inline
+}
+.stat_name{
+  text-transform: capitalize;
+}
+.base_stat{
+  display: inline;
+}

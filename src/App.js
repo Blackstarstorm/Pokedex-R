@@ -5,7 +5,8 @@ import Hero from './componenets/Hero';
 import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
 import ModalNPM from "react-modal";
-import { getType, getSprite, getShinySprite, getPokeAbilities } from './services/api-helper';
+import Data from './componenets/Data';
+import { getType, getSprite, getShinySprite, getPokeAbilities, getPokeStats } from './services/api-helper';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
       sprite: "",
       shinySprite: "",
       ability: [],
+      stats: [],
       showModal: false
     };
 
@@ -46,10 +48,12 @@ class App extends React.Component {
     let sprite = await getSprite(name);
     let shinySprite = await getShinySprite(name);
     let ability = await getPokeAbilities(name);
+    let stats = await getPokeStats(name);
       this.setState({
         sprite,
         shinySprite,
         ability,
+        stats,
         showModal: true
       });
     }
@@ -100,25 +104,12 @@ class App extends React.Component {
             contentLabel= "onRequestClose"
             className="Modal"
           >
-            
-            <div>
-              <div id="sprite_layout">
-                <h3>Normal Look</h3>
-                <img src={this.state.sprite} alt="a pokémon sprite" />
-            
-                <h3>Shiny Look</h3>
-                <img src={this.state.shinySprite} alt="a shiny pokémon sprite" />
-              </div>
-              
-                {
-                  this.state.ability.map(ab => (
-                    <div key={ab.abilites}>
-                      <ul>{ab.abilites}</ul>
-                    </div>
-                ))
-                }
-            
-            </div>
+            <Data
+              sprite={this.state.sprite}
+              shinySprite={this.state.shinySprite}
+              ability={this.state.ability}
+              stats={this.state.stats}
+            />
 
             <button onClick={this.modalHandleClickClose}>Close</button>
 
