@@ -9,4 +9,15 @@ export const getSprite = async function (name) {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
   return response.data.sprites.front_default;
 }
-// response.data.sprites.front_default
+
+export const getShinySprite = async function (name) {
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  return response.data.sprites.front_shiny;
+}
+
+export const getPokeAbilities = async function (name) {
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  return response.data.abilities;
+}
+
+// return response.data.abilities;

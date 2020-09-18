@@ -5,7 +5,7 @@ import Hero from './componenets/Hero';
 import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
 import ModalNPM from "react-modal";
-import { getType, getSprite } from './services/api-helper';
+import { getType, getSprite, getShinySprite, getPokeAbilities } from './services/api-helper';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +13,9 @@ class App extends React.Component {
     this.state = {
       types: "",
       pokemon: [],
-      sprite:"",
+      sprite: "",
+      shinySprite: "",
+      ability: [],
       showModal: false
     };
 
@@ -29,14 +31,6 @@ class App extends React.Component {
       types: pokemon
     })
   }
-
-  // componentDidMount = async (event) => {
-  //   let name = event.target.id;
-  //   let sprite = await getSprite(name);
-  //   this.setState({
-  //     data: sprite
-  //   })
-  // }
   
 /// Pokemon types
   handleChange = (event) => {
@@ -46,12 +40,16 @@ class App extends React.Component {
     })
   }
 
-//Open modal, showing sprites
+//Open modal, showing sprites, abilities
   modalHandleClick = async (event) => {
     let name = event.target.id;
     let sprite = await getSprite(name);
+    let shinySprite = await getShinySprite(name);
+    let ability = await getPokeAbilities(name);
       this.setState({
         sprite,
+        shinySprite,
+        ability,
         showModal: true
       });
     }
@@ -103,7 +101,25 @@ class App extends React.Component {
             className="Modal"
           >
             
-            <div><img src={this.state.sprite} alt="a sprite" /></div>
+            <div>
+              <div id="sprite_layout">
+                <h3>Normal Look</h3>
+                <img src={this.state.sprite} alt="a pokémon sprite" />
+            
+                <h3>Shiny Look</h3>
+                <img src={this.state.shinySprite} alt="a shiny pokémon sprite" />
+              </div>
+              
+                {
+                  this.state.ability.map(ab => (
+                    <div key={ab.abilites}>
+                      <ul>{ab.abilites}</ul>
+                    </div>
+                ))
+                }
+            
+            </div>
+
             <button onClick={this.modalHandleClickClose}>Close</button>
 
           </ModalNPM>
