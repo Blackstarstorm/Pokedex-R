@@ -16,7 +16,7 @@ export default class Types extends React.Component {
           
           <select id="poke-types" onChange={this.props.handleChange} >
 
-          <option >Select a Pokémon Type</option>
+          <option value="DEFAULT">Select a Pokémon Type</option>
             <option value="normal">Normal</option>
             <option value="fighting" >Fighting</option>
             <option value="flying" >Flying</option>

@@ -103,6 +103,7 @@ class App extends React.Component {
             isOpen={this.state.showModal}
             contentLabel= "onRequestClose"
             className="Modal"
+            ariaHideApp={false}
           >
             <Data
               sprite={this.state.sprite}

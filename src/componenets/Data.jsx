@@ -22,7 +22,9 @@ export default class Data extends React.Component {
         {
           
           this.props.ability.map(ab => (
-            <div className="ability">
+            <div
+            key={ab.id}
+              className="ability">
                 <ul>{ab.ability.name}</ul>
                 
               </div>
