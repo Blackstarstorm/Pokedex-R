@@ -6,6 +6,7 @@ import Types from './componenets/Types';
 import Pokelist from './componenets/Pokelist';
 import ModalNPM from "react-modal";
 import Data from './componenets/Data';
+import Footer from './componenets/Footer';
 import { getType, getSprite, getShinySprite, getPokeAbilities, getPokeStats } from './services/api-helper';
 
 class App extends React.Component {
@@ -81,8 +82,8 @@ class App extends React.Component {
         <header>
           <Title />
 
-          <Hero />
         </header>
+          <Hero />
 
         <nav>
           <Types
@@ -118,7 +119,7 @@ class App extends React.Component {
         </section>
 
         <footer>
-
+          <Footer />
         </footer>
 
       </div>

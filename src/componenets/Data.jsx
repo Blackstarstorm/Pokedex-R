@@ -5,19 +5,19 @@ export default class Data extends React.Component {
     return (
     <div id="data">
       <div className="sprite_layout">
-        <h3>Normal</h3>
+        <h3 className="modal_titles">Normal</h3>
           {this.props.sprite ? <img src={this.props.sprite} alt="a pokémon sprite" /> : 
             <img className="no_data" src="https://res.cloudinary.com/dvysqqdqe/image/upload/v1600399811/220_iad9fa.png" alt="No data avalible"
             />
           }
     
-        <h3>Shiny</h3>
+        <h3 className="modal_titles">Shiny</h3>
           {this.props.shinySprite ? <img src={this.props.shinySprite} alt="a shiny pokémon sprite" /> :
         <img className="no_data" src="https://res.cloudinary.com/dvysqqdqe/image/upload/v1600399811/220_iad9fa.png" alt="No data avalible"
         />}
       </div>
         
-        <h4>Abilities:</h4>
+        <h4 className="modal_titles">Abilities:</h4>
           
         {
           
@@ -31,7 +31,7 @@ export default class Data extends React.Component {
             ))
           }
           
-      <h4>Stats:</h4>
+      <h4 className="modal_titles">Stats:</h4>
         {
           this.props.stats.map(num => (
             <div className="status">

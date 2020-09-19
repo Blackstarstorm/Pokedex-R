@@ -3,7 +3,7 @@ import React from 'react'
 export default function Title() {
   return (
     <div id="title">
-      <h1>Welcome to the Dex</h1>
+      <h1 className="intro">Welcome to the Dexs</h1>
       
     </div>
   )

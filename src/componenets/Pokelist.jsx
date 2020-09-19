@@ -12,7 +12,7 @@ class Pokelist extends React.Component {
               className="poke-name"
             >
               <h2 className="name">{poke.pokemon.name}</h2>
-              <button id={poke.pokemon.name}
+              <button id={poke.pokemon.name} className="more-info"
                 onClick={this.props.openModal}>More Info</button>
             </div>
           ))
