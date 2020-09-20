@@ -22,7 +22,6 @@ class App extends React.Component {
       shinySprite: "",
       ability: [],
       stats: [],
-      sound: "",
       showModal: false
     };
 
@@ -67,7 +66,7 @@ class App extends React.Component {
     }
 
   //Close modal
-  modalHandleClickClose = () => {
+  modalHandleClickClose = async () => {
     this.setState({
       showModal: false
     }); let pcLogout = new Audio(PC_Logout);
@@ -94,6 +93,7 @@ class App extends React.Component {
         
         <nav>
           <Types
+            types={this.state.types}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
             
