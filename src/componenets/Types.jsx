@@ -1,11 +1,13 @@
 import React from 'react';
-
-
+import Normal from "../sound/ORASPetalburgCity.mp3";
+import Fighting from "../sound/HGSSKantoGymLeader.mp3";
 
 export default class Types extends React.Component {
   
 
   render() {
+    let normal = new Audio(Normal);
+    let fighting = new Audio(Fighting);
     return (
       <div id="drop_menu">
         
@@ -16,9 +18,9 @@ export default class Types extends React.Component {
           
           <select id="poke-types" onChange={this.props.handleChange} >
 
-          <option value="DEFAULT">Select a Pokémon Type</option>
-            <option value="normal">Normal</option>
-            <option value="fighting" >Fighting</option>
+          <option value=""  hidden>Select a Pokémon Type</option>
+            <option value="normal" onClick={async () => await normal.play()}>Normal</option>
+            <option value="fighting" onClick={async () => await fighting.play()}>Fighting</option>
             <option value="flying" >Flying</option>
             <option value="poison" >Poison</option>
             <option value="ground" >Ground</option>

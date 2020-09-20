@@ -74,7 +74,6 @@ class App extends React.Component {
     })
   }
 
-  
 
   render() {
     return (
@@ -89,6 +88,7 @@ class App extends React.Component {
           <Types
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
+            
           />
         </nav>
 
