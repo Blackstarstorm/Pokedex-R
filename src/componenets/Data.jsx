@@ -3,7 +3,7 @@ import React from 'react';
 export default class Data extends React.Component {
   render() {
     return (
-    <div id="data">
+      <div id="data">
       <div className="sprite_layout">
         <h3 className="modal_titles">Normal</h3>
           {this.props.sprite ? <img src={this.props.sprite} alt="a pokémon sprite" /> : 
@@ -23,9 +23,8 @@ export default class Data extends React.Component {
           
           this.props.ability.map(ab => (
             <div
-            key={ab.id}
               className="ability">
-                <ul>{ab.ability.name}</ul>
+              <ul>{ab.ability.name}</ul>
                 
               </div>
             ))

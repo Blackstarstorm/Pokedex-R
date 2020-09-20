@@ -1,4 +1,5 @@
 import React from 'react';
+import Dex from "../sound/Pokédex.mp3";
 import Normal from "../sound/ORASPetalburgCity.mp3";
 import Fighting from "../sound/HGSSKantoGymLeader.mp3";
 
@@ -6,6 +7,7 @@ export default class Types extends React.Component {
   
 
   render() {
+    let dex = new Audio(Dex);
     let normal = new Audio(Normal);
     let fighting = new Audio(Fighting);
     return (
@@ -16,10 +18,10 @@ export default class Types extends React.Component {
         <form onSubmit={this.props.handleSubmit}
           >
           
-          <select id="poke-types" onChange={this.props.handleChange} >
+          <select id="poke-types" onChange={this.props.handleChange}>
 
           <option value=""  hidden>Select a Pokémon Type</option>
-            <option value="normal" onClick={async () => await normal.play()}>Normal</option>
+            <option onClick={async () => await normal.play()} value="normal" >Normal</option>
             <option value="fighting" onClick={async () => await fighting.play()}>Fighting</option>
             <option value="flying" >Flying</option>
             <option value="poison" >Poison</option>
@@ -39,7 +41,7 @@ export default class Types extends React.Component {
             <option value="fairy">Fairy</option>
           
           </select>
-        <button id="btn-submit">Search</button>
+        <button id="btn-submit" onClick={async () => dex.play()}>Search</button>
         </form>
         
       </div>

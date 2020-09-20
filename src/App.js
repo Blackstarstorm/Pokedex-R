@@ -8,6 +8,9 @@ import ModalNPM from "react-modal";
 import Data from './componenets/Data';
 import Footer from './componenets/Footer';
 import { getType, getSprite, getShinySprite, getPokeAbilities, getPokeStats } from './services/api-helper';
+import PC_On from "./sound/PC Turning On.mp3";
+import PC_Logout from "./sound/PC Logout.mp3";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +22,7 @@ class App extends React.Component {
       shinySprite: "",
       ability: [],
       stats: [],
+      sound: "",
       showModal: false
     };
 
@@ -40,9 +44,10 @@ class App extends React.Component {
     let value = event.target.value;
     this.setState({
       types: value
-    })
+    });
   }
 
+  
 //Open modal, showing sprites, abilities
   modalHandleClick = async (event) => {
     let name = event.target.id;
@@ -56,14 +61,16 @@ class App extends React.Component {
         ability,
         stats,
         showModal: true
-      });
+      }); let pc = new Audio(PC_On);
+      pc.play();
     }
 
   //Close modal
   modalHandleClickClose = () => {
     this.setState({
       showModal: false
-    });
+    }); let pcLogout = new Audio(PC_Logout);
+    pcLogout.play();
   }
 
   handleSubmit = async (event) => {
@@ -83,7 +90,7 @@ class App extends React.Component {
 
         </header>
           <Hero />
-
+        
         <nav>
           <Types
             handleChange={this.handleChange}
