@@ -14,6 +14,7 @@ export default class Types extends React.Component {
       <div id="drop_menu">
         
         <h2>Discover more Pokémon by their types</h2>
+        
 
         <form onSubmit={this.props.handleSubmit}
           >
@@ -21,8 +22,10 @@ export default class Types extends React.Component {
           <select id="poke-types" onChange={this.props.handleChange}>
 
           <option value=""  hidden>Select a Pokémon Type</option>
-            <option onClick={async () => await normal.play()} value="normal" >Normal</option>
-            <option value="fighting" onClick={async () => await fighting.play()}>Fighting</option>
+            <option value="normal" onClick={async () => await normal.play()} >Normal</option>
+            <option value="fighting" onClick={
+              async () => await fighting.play()
+            }>Fighting</option>
             <option value="flying" >Flying</option>
             <option value="poison" >Poison</option>
             <option value="ground" >Ground</option>
@@ -41,7 +44,7 @@ export default class Types extends React.Component {
             <option value="fairy">Fairy</option>
           
           </select>
-        <button id="btn-submit" onClick={async () => dex.play()}>Search</button>
+        <button id="btn-submit" onClick={async () => await dex.play()}>Search</button>
         </form>
         
       </div>

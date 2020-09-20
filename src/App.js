@@ -47,6 +47,7 @@ class App extends React.Component {
     });
   }
 
+
   
 //Open modal, showing sprites, abilities
   modalHandleClick = async (event) => {
@@ -61,8 +62,8 @@ class App extends React.Component {
         ability,
         stats,
         showModal: true
-      }); let pc = new Audio(PC_On);
-      pc.play();
+      }); let pcOn = new Audio(PC_On);
+      pcOn.play();
     }
 
   //Close modal
