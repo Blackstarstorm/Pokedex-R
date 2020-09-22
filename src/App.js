@@ -50,7 +50,7 @@ class App extends React.Component {
 
 
   
-//Open modal, showing sprites, abilities
+//Open modal, showing sprites, abilities, stats and pokemon types
   modalHandleClick = async (event) => {
     let name = event.target.id;
     let sprite = await getSprite(name);
