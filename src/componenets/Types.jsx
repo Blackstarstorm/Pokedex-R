@@ -19,6 +19,9 @@ import Dark from "../sound/SWSHSpikemuth.mp3";
 import Fairy from "../sound/SWSHBallonlea.mp3";
 
 export default class Types extends React.Component {
+  state = {
+    play: false
+  }
     normal = new Audio(Normal);
     fighting = new Audio(Fighting);
     flying = new Audio(Flying);
@@ -77,6 +80,7 @@ export default class Types extends React.Component {
       this.fairy.play();
     }
   }
+  
   render() {
     return (
       <div id="drop_menu">
@@ -86,7 +90,6 @@ export default class Types extends React.Component {
 
         <form onSubmit={this.props.handleSubmit}
         >
-          
           <select id="poke-types" onChange={this.props.handleChange}>
 
           <option value=""  hidden>Select a Pokémon Type</option>
@@ -103,7 +106,7 @@ export default class Types extends React.Component {
             <option value="fire">Fire</option>
             <option value="water">Water</option>
             <option value="grass">Grass</option>
-            <option value="electric">Electic</option>
+            <option value="electric">Electric</option>
             <option value="psychic">Psychic</option>
             <option value="ice">Ice</option>
             <option value="dragon">Dragon</option>
@@ -111,7 +114,10 @@ export default class Types extends React.Component {
             <option value="fairy">Fairy</option>
           
           </select>
-        <button id="btn-submit" onClick={async () => await this.playMusic()} controls>Search</button>
+          
+          <button id="btn-submit" onClick={async () => await this.playMusic()}>
+            Search</button>
+          
         </form>
         
       </div>

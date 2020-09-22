@@ -10,6 +10,7 @@ import Footer from './componenets/Footer';
 import { getType, getSprite, getShinySprite, getPokeAbilities, getPokeStats } from './services/api-helper';
 import PC_On from "./sound/PC Turning On.mp3";
 import PC_Logout from "./sound/PC Logout.mp3";
+import Dex from "./sound/Pokédex.mp3";
 
 
 class App extends React.Component {
@@ -81,6 +82,12 @@ class App extends React.Component {
     })
   }
 
+  //Sound for Footer
+  audioTabOut = () => {
+    let dex = new Audio(Dex);
+    dex.play();
+  }
+
 
   render() {
     return (
@@ -127,7 +134,8 @@ class App extends React.Component {
         </section>
 
         <footer>
-          <Footer />
+          <Footer
+            audioTabOut={this.audioTabOut}/>
         </footer>
 
       </div>
