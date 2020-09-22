@@ -7,7 +7,7 @@ import Pokelist from './componenets/Pokelist';
 import ModalNPM from "react-modal";
 import Data from './componenets/Data';
 import Footer from './componenets/Footer';
-import { getType, getSprite, getShinySprite, getPokeAbilities, getPokeStats } from './services/api-helper';
+import { getType, getSprite, getShinySprite, getPokeAbilities, getPokeStats, getTypesByPoke } from './services/api-helper';
 import PC_On from "./sound/PC Turning On.mp3";
 import PC_Logout from "./sound/PC Logout.mp3";
 import Dex from "./sound/Pokédex.mp3";
@@ -19,6 +19,7 @@ class App extends React.Component {
     this.state = {
       types: "",
       pokemon: [],
+      typedPoke: [],
       sprite: "",
       shinySprite: "",
       ability: [],
@@ -56,11 +57,13 @@ class App extends React.Component {
     let shinySprite = await getShinySprite(name);
     let ability = await getPokeAbilities(name);
     let stats = await getPokeStats(name);
+    let typedPoke = await getTypesByPoke(name)
       this.setState({
         sprite,
         shinySprite,
         ability,
         stats,
+        typedPoke,
         showModal: true
       }); let pcOn = new Audio(PC_On);
       pcOn.play();
@@ -126,6 +129,7 @@ class App extends React.Component {
               shinySprite={this.state.shinySprite}
               ability={this.state.ability}
               stats={this.state.stats}
+              typedPoke={this.state.typedPoke}
             />
 
             <button className="close" onClick={this.modalHandleClickClose}>Close</button>

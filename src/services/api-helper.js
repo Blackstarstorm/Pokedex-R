@@ -24,3 +24,8 @@ export const getPokeStats = async function (name) {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
   return response.data.stats;
 }
+export const getTypesByPoke = async function (name) {
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+return response.data.types;
+}
+

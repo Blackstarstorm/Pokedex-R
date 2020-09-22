@@ -19,9 +19,6 @@ import Dark from "../sound/SWSHSpikemuth.mp3";
 import Fairy from "../sound/SWSHBallonlea.mp3";
 
 export default class Types extends React.Component {
-  state = {
-    play: false
-  }
     normal = new Audio(Normal);
     fighting = new Audio(Fighting);
     flying = new Audio(Flying);
@@ -43,7 +40,7 @@ export default class Types extends React.Component {
   
   playMusic = async () => {
     if (this.props.types === "normal") {
-      this.normal.play();
+    await this.normal.play(); 
     } else if(this.props.types === "fighting"){
       this.fighting.play();
     }else if(this.props.types === "flying"){

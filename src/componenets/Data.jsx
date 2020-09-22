@@ -16,7 +16,15 @@ export default class Data extends React.Component {
         <img className="no_data" src="https://res.cloudinary.com/dvysqqdqe/image/upload/v1600399811/220_iad9fa.png" alt="No data avalible"
         />}
       </div>
-        
+        <h4 className="modal_titles">Type:</h4>
+        {
+          this.props.typedPoke.map(ty => (
+            <div
+            className="typed_poke">
+              <ul className="mini_list">{ty.type.name}</ul>
+            </div>
+          ))
+        }
         <h4 className="modal_titles">Abilities:</h4>
           
         {
@@ -24,7 +32,7 @@ export default class Data extends React.Component {
           this.props.ability.map(ab => (
             <div
               className="ability">
-              <ul>{ab.ability.name}</ul>
+              <ul className="mini_list">{ab.ability.name}</ul>
                 
               </div>
             ))

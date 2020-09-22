@@ -79,6 +79,7 @@ transform: scale(1.2);
 /* // The Modal */
 .Modal{
   position: absolute;
+  margin-top: -2.4rem;
     top: 3rem;
     left: 3rem;
     right: 3rem;
@@ -105,8 +106,11 @@ transform: scale(1.2);
   height: 6rem;
   padding: 1rem;
 }
-.ability{
+.ability, .typed_poke{
   text-transform: capitalize;
+}
+.mini_list{
+  color: whitesmoke;
 }
 .status{
   display: inline
@@ -181,9 +185,22 @@ transform: scale(1.2);
     font-size: 1.2rem;
   }
   .Modal{
-    margin-top: -2.6rem;
+    margin-top: -3.8rem;
   }
+  
   .sprite_layout{
     display: block;
+  }
+  .modal_titles{
+    font-size: 1rem;
+  }
+  .typed_poke .ability{
+    font-size: 1rem;
+  }
+  .mini_list{
+    font-size: 0.8rem;
+  }
+  .stat_name{
+    font-size: 0.8rem;
   }
 };
