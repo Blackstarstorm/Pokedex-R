@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactAudioPlayer from 'react-audio-player';
 import Normal from "../sound/ORASPetalburgCity.mp3";
 import Fighting from "../sound/HGSSKantoGymLeader.mp3";
 import Flying from "../sound/BWMistraltonCity.mp3";
@@ -84,6 +85,11 @@ export default class Types extends React.Component {
         
         <h2>Discover more Pokémon by their types</h2>
 
+        <ReactAudioPlayer
+          src=""
+          
+          controls
+        />
 
         <form onSubmit={this.props.handleSubmit}
         >
@@ -114,7 +120,7 @@ export default class Types extends React.Component {
           
           <button id="btn-submit" onClick={async () => await this.playMusic()}>
             Search</button>
-          
+            
         </form>
         
       </div>
