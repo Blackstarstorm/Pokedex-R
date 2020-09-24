@@ -21,7 +21,8 @@ export default class Data extends React.Component {
           this.props.typedPoke.map(ty => (
             <div
             className="typed_poke">
-              <ul className="mini_list">{ty.type.name}</ul>
+              <ul
+                className="mini_list">{ty.type.name}</ul>
             </div>
           ))
         }
@@ -32,7 +33,8 @@ export default class Data extends React.Component {
           this.props.ability.map(ab => (
             <div
               className="ability">
-              <ul className="mini_list">{ab.ability.name}</ul>
+              <ul
+                className="mini_list">{ab.ability.name}</ul>
                 
               </div>
             ))
