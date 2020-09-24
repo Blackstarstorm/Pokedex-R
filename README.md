@@ -1,6 +1,6 @@
 ## Rotom-Dex
 
-# This app is a rework of my Who's that Pokémon(Game-test). Now on a React Frame work.
+### This app is a rework of my Who's that Pokémon(Game-test). Now on a React Frame work.
 
 ### Users will be able to learn about pokémon based on their respected types containing more sprites and infomation about the pokémon.
 
