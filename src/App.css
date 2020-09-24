@@ -185,22 +185,23 @@ transform: scale(1.2);
     font-size: 1.2rem;
   }
   .Modal{
-    margin-top: -3.8rem;
+    margin-top: -3rem;
+    bottom: -1rem;
   }
   
   .sprite_layout{
     display: block;
   }
   .modal_titles{
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   .typed_poke .ability{
     font-size: 1rem;
   }
   .mini_list{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .stat_name{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 };
