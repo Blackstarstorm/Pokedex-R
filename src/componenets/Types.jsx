@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
+
 import Normal from "../sound/ORASPetalburgCity.mp3";
 import Fighting from "../sound/HGSSKantoGymLeader.mp3";
 import Flying from "../sound/BWMistraltonCity.mp3";
@@ -41,43 +41,368 @@ export default class Types extends React.Component {
   
   playMusic = async () => {
     if (this.props.types === "normal") {
-    await this.normal.play(); 
-    } else if(this.props.types === "fighting"){
-      this.fighting.play();
-    }else if(this.props.types === "flying"){
-      this.flying.play();
-    }else if(this.props.types === "poison"){
-      this.poison.play();
-    }else if(this.props.types === "ground"){
-      this.ground.play();
-    }else if(this.props.types === "rock"){
-      this.rock.play();
-    }else if(this.props.types === "bug"){
-      this.bug.play();
-    }else if(this.props.types === "ghost"){
-      this.ghost.play();
-    }else if(this.props.types === "steel"){
-      this.steel.play();
-    }else if(this.props.types === "fire"){
-      this.fire.play();
-    }else if(this.props.types === "water"){
-      this.water.play();
-    }else if(this.props.types === "grass"){
-      this.grass.play();
-    }else if(this.props.types === "electric"){
-      this.electric.play();
-    }else if(this.props.types === "psychic"){
-      this.psychic.play();
-    }else if(this.props.types === "ice"){
-      this.ice.play();
-    }else if(this.props.types === "dragon"){
-      this.dragon.play();
-    }else if(this.props.types === "dark"){
-      this.dark.play();
-    }else {
-      this.fairy.play();
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.normal.play(); 
+    } else if (this.props.types === "fighting") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.fighting.play();
+    } else if (this.props.types === "flying") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.flying.play();
+    } else if (this.props.types === "poison") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.poison.play();
+    } else if (this.props.types === "ground") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();    
+    this.dark.load();
+    this.fairy.load();
+    this.ground.play();
+    } else if (this.props.types === "rock") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.rock.play();
+    } else if (this.props.types === "bug") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.bug.play();
+    } else if (this.props.types === "ghost") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.ghost.play();
+    } else if (this.props.types === "steel") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.steel.play();
+    } else if (this.props.types === "fire") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.fire.play();
+    } else if (this.props.types === "water") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.water.play();
+    } else if (this.props.types === "grass") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.grass.play();
+    } else if (this.props.types === "electric") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.electric.play();
+    } else if (this.props.types === "psychic") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.psychic.play();
+    } else if (this.props.types === "ice") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.ice.play();
+    } else if (this.props.types === "dragon") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.dragon.play();
+    } else if (this.props.types === "dark") {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.dark.play();
+    } else {
+    this.normal.load();
+    this.fighting.load();
+    this.flying.load();
+    this.poison.load();
+    this.ground.load();
+    this.rock.load();
+    this.bug.load();
+    this.ghost.load();
+    this.steel.load();
+    this.fire.load();
+    this.water.load();
+    this.grass.load();
+    this.electric.load();
+    this.psychic.load();
+    this.ice.load();
+    this.dragon.load();
+    this.dark.load();
+    this.fairy.load();
+    this.fairy.play();
     }
   }
+
   
   render() {
     return (
@@ -85,11 +410,6 @@ export default class Types extends React.Component {
         
         <h2>Discover more Pokémon by their types</h2>
 
-        <ReactAudioPlayer
-          src=""
-          
-          controls
-        />
 
         <form onSubmit={this.props.handleSubmit}
         >
